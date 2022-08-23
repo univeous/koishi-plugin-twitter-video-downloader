@@ -15,6 +15,13 @@ Twitter视频下载插件 For [Koishi](https://github.com/koishijs/koishi) v4。
 
 是否解析Twitter链接。如果为否，则只能通过命令调用。
 
+### showVideoUrl
+
+- 类型: `boolean`
+- 默认值: `true`
+
+是否发送视频链接。
+
 ## 指令：twvd
 
 - 基本语法：`twvd <url>`
