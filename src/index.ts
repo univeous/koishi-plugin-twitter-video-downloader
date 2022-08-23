@@ -34,7 +34,7 @@ export function apply(ctx: Context, config: Config) {
 
   ctx.command('twvd <url:text>', 'Twitter视频下载')
     .action(async ({session}, url) => {
-      if (!parseUrl) return '请提供url。'
+      if (!url) return '请提供url。'
       const match = url.match(urlValidation)
       if (!match) return '无效的url。'
       const result = await handleUrl(url)
