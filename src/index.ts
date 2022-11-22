@@ -39,7 +39,7 @@ export function apply(ctx: Context, config: Config) {
     .action(async ({session}, url) => {
       if (!url) return '请提供url。'
       //const match = url.match(urlValidation)
-      if (url.includes('twitter.com')) return '无效的url。'
+      if (!url.includes('twitter.com')) return '无效的url。'
       const result = await handleUrl(url)
       if (result === 'Error (or) no supported video found.') return '无效的url。'
       if (result.result.VideosInfo.length === 0) return '未找到视频。'
